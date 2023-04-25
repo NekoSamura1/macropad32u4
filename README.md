@@ -11,9 +11,9 @@ Macro description
   5) LBM hold toggle
   6) RBM hold toggle
   7) GI artifact upgrade (depends on your system mouse sensivity settings)
-  8) -
-  9) -
-  10) -
+  8) GI expeditions
+  9) GI expeditions 12h
+  10) GI expeditions 20h
   11) -
   12) -
   13) -
