@@ -24,6 +24,152 @@ uint16_t buttonstate = 0;
 uint16_t macrostate = 0;
 uint16_t macrocng = 0;
 
+#define CLICKDELAY  50
+#define EXTENDELAY 400
+void exphelper(){  
+  for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);
+  for (uint8_t i = 0; i < 40; i++) Mouse.move(124, 67);
+  delay(CLICKDELAY);  
+  Mouse.click(); //сбор
+  delay(EXTENDELAY);   
+  Mouse.click(); //подтверждение сбора
+  delay(EXTENDELAY);  
+  Mouse.click(); //выбор персонажа
+  delay(EXTENDELAY); 
+}
+
+// void expeditions(){
+//   for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------МОНД
+//   for (uint8_t i = 0; i < 4; i++) Mouse.move(48, 120);
+//   delay(CLICKDELAY);
+//   Mouse.click(); //мондштадт 
+//   delay(CLICKDELAY);
+//   for (uint8_t i = 0; i < 20; i++) Mouse.move(127, 20);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор 1 эксп
+//   delay(CLICKDELAY); 
+//   exphelper();  //----------------------------------------------сбор
+//   for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -108);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор беннета
+//   delay(CLICKDELAY);
+//   for (uint8_t i = 0; i < 11; i++) Mouse.move(81, 125);  
+//   delay(EXTENDELAY);
+//   Mouse.click(); //выбор 2 эксп
+//   delay(CLICKDELAY);
+//   exphelper();  //----------------------------------------------сбор
+//   for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -97);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор фишки
+//   delay(CLICKDELAY);
+//   for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------ЛИЮЭ 
+//   for (uint8_t i = 0; i < 5; i++) Mouse.move(37, 120);
+//   delay(EXTENDELAY);
+//   Mouse.click(); //ЛИЮЭ 
+//   delay(CLICKDELAY);
+//   for (uint8_t i = 0; i < 20; i++) Mouse.move(120, 33);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор 1 эксп
+//   delay(CLICKDELAY);  
+//   exphelper();  //----------------------------------------------сбор 
+//   for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -85);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор Елань
+//   delay(CLICKDELAY);
+//   for (uint8_t i = 0; i < 4; i++) Mouse.move(-30, 127);  
+//   delay(EXTENDELAY);
+//   Mouse.click(); //выбор 2 эксп
+//   delay(CLICKDELAY);
+//   exphelper();  //----------------------------------------------сбор
+//   for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -97);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор Кекинг
+//   delay(CLICKDELAY);
+
+//   for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------ЯПОНИЯ
+//   for (uint8_t i = 0; i < 6; i++) Mouse.move(32, 127);
+//   delay(EXTENDELAY);
+//   Mouse.click(); //япония
+//   delay(CLICKDELAY);
+//   for (uint8_t i = 0; i < 20; i++) Mouse.move(127, -8);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор 1 эксп
+//   exphelper();  //----------------------------------------------сбор
+//   for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -97);
+//   delay(CLICKDELAY);  
+//   Mouse.click(); //выбор кукихи
+// }
+
+void expeditions12h(){
+  for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------МОНД
+  for (uint8_t i = 0; i < 4; i++) Mouse.move(48, 120);
+  delay(CLICKDELAY);
+  Mouse.click(); //мондштадт 
+  delay(CLICKDELAY);
+  for (uint8_t i = 0; i < 20; i++) Mouse.move(127, 20);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор 1 эксп
+  delay(CLICKDELAY); 
+  exphelper();  //----------------------------------------------сбор
+  for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -108);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор беннета
+  delay(CLICKDELAY);
+  for (uint8_t i = 0; i < 11; i++) Mouse.move(81, 125);  
+  delay(EXTENDELAY);
+  Mouse.click(); //выбор 2 эксп
+  delay(CLICKDELAY);
+  exphelper();  //----------------------------------------------сбор
+  for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -97);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор фишки
+  delay(CLICKDELAY);
+  for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------ЛИЮЭ 
+  for (uint8_t i = 0; i < 5; i++) Mouse.move(37, 120);
+  delay(EXTENDELAY);
+  Mouse.click(); //ЛИЮЭ 
+  delay(CLICKDELAY);
+  for (uint8_t i = 0; i < 4; i++) Mouse.move(-30, 127);  
+  delay(EXTENDELAY);
+  Mouse.click(); //выбор 2 эксп
+  delay(CLICKDELAY);
+  exphelper();  //----------------------------------------------сбор
+  for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -97);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор Кекинг
+  delay(CLICKDELAY);
+}
+
+void expeditions20h(){
+  for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------ЛИЮЭ 
+  for (uint8_t i = 0; i < 5; i++) Mouse.move(37, 120);
+  delay(EXTENDELAY);
+  Mouse.click(); //ЛИЮЭ 
+  delay(CLICKDELAY);
+  for (uint8_t i = 0; i < 20; i++) Mouse.move(120, 33);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор 1 эксп
+  delay(CLICKDELAY);  
+  exphelper();  //----------------------------------------------сбор 
+  for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -85);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор Елань
+  delay(CLICKDELAY);
+
+  for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);//--------------------------------------------------------------ЯПОНИЯ
+  for (uint8_t i = 0; i < 6; i++) Mouse.move(32, 127);
+  delay(EXTENDELAY);
+  Mouse.click(); //япония
+  delay(CLICKDELAY);
+  for (uint8_t i = 0; i < 20; i++) Mouse.move(127, -8);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор 1 эксп
+  exphelper();  //----------------------------------------------сбор
+  for (uint8_t i = 0; i < 21; i++) Mouse.move(-127, -97);
+  delay(CLICKDELAY);  
+  Mouse.click(); //выбор кукихи
+}
+
 void buttonstateupdate() {  //проверка матрицы кнопок
   //buttonstateprev = buttonstate;
   buttonstate = 0;
@@ -90,6 +236,7 @@ void macrostatedraw() {  //отрисовка интерфейса
         //lcd.fillCircle(44 + i * 50, 54 + j * 50, 24, BLACK);
         lcd.drawCircle(44 + i * 50, 54 + j * 50, 24, RED);
       }
+      macroupdate = 0;
 }
 void macro() {  //сами макросы
   macroupdate = macrostate;
@@ -145,7 +292,9 @@ void macro() {  //сами макросы
   else Mouse.release(MOUSE_RIGHT);
 
   macrostate &= ~(1 << 6);  //                                                      gi artifact 2.3
-  if (buttonstate & 1 << 6) {
+  if (buttonstate & 1 << 6) {    
+    macrostate |= 1 << 6;
+    macroupdate = 1;
     for (uint8_t i = 0; i < 41; i++) Mouse.move(-127, -127);
     for (uint8_t i = 0; i < 35; i++) Mouse.move(127, 58);
     delay(20);
@@ -162,7 +311,28 @@ void macro() {  //сами макросы
     Mouse.move(0, 100);
     delay(300);
     Mouse.click();  //улучшить
-    macrostate |= 1 << 6;
+  }
+
+  macrostate &= ~(1 << 7);  //                                                      gi expeditions 2.4
+  if (buttonstate & 1 << 7) {
+    macrostate |= 1 << 7;
+    macroupdate = 1;
+    expeditions12h();
+    expeditions20h();
+  }
+
+  macrostate &= ~(1 << 8);  //                                                      gi expeditions 3.1
+  if (buttonstate & 1 << 8) {
+    macrostate |= 1 << 8;
+    macroupdate = 1;
+    expeditions12h();
+  }
+
+  macrostate &= ~(1 << 9);  //                                                      gi expeditions 3.2
+  if (buttonstate & 1 << 9) {
+    macrostate |= 1 << 9;
+    macroupdate = 1;
+    expeditions20h();
   }
 
   macrostate &= ~(1 << 14);  //                                                      powershell 4.3
@@ -185,8 +355,7 @@ void macro() {  //сами макросы
     macrostate = 1 << 15;
   }
 
-  if (macrostate == macroupdate) macroupdate = 0;
-  else macroupdate = 1;
+  if (macrostate != macroupdate) macroupdate = 1;
 }
 
 void setup() {
@@ -202,10 +371,13 @@ void setup() {
   pinMode(r2, INPUT_PULLUP);
   pinMode(r3, INPUT_PULLUP);
   pinMode(r4, INPUT_PULLUP);
+  macrostatedraw();
 }
 void loop() {
   buttonstateupdate();                //опрос кнопок
-  if (macroupdate) macrostatedraw();  //обновить экранчик
   macro();                            //сами макросы
   delay(DELAYOFFSET);                 //задержечка
+}
+void yield() {
+  if (macroupdate) macrostatedraw();  //обновить экранчик
 }
