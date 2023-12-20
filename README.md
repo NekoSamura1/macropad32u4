@@ -21,7 +21,16 @@ Macro description
   15) Open Powershell
   16) Turn off all macros
 
-There is ability to print some strings from EEPROM (could be used as small cript or password manager with hotkeys), that could be activated be shorting to GND A3 pin
+
+There is ability to print some strings from EEPROM (could be used as small cript or password manager with hotkeys), that could be activated be shorting to GND A3 pin.
+Strings MUST be writed to EEPROM by another program looking like:
+  
+  char writedString[] = "suprGigaString";
+  uint16_t memAddres = 0;
+  EEPROM.update(memAddres++, sizeof(writedString) - 1);
+  for (uint8_t i = 0; i < sizeof(writedString) - 1; i++)
+    EEPROM.update(memAddres++, writedString0[i]);
+  
 
 Used Libs:</br>
   Adafruit_GFX https://github.com/adafruit/Adafruit-GFX-Library</br>
