@@ -21,6 +21,8 @@ Macro description
   15) Open Powershell
   16) Turn off all macros
 
+There is ability to print some strings from EEPROM (could be used as small cript or password manager with hotkeys)
+
 Used Libs:</br>
   Adafruit_GFX https://github.com/adafruit/Adafruit-GFX-Library</br>
   Arduino_ST7789_Fast https://github.com/cbm80amiga/Arduino_ST7789_Fast </br>
